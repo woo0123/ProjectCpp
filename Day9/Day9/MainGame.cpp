@@ -509,3 +509,20 @@ void GotoXY(int x, int y)
 	COORD pos = { x,y };
 	::SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
+/*_myScore 와 _comScore 를 계산해주는 부분이 없어서 일부 로직 정상작동 안할것같네요!
+코드깔끔하고 좋아요!!
+
+조금 아쉬운게 있다면, 
+MyVicDiscrimination 와 
+ComVicDiscrimination 함수는 
+통일시킬수있었을것 같은것
+
+함수의 사용이유중에 
+가독성
+재사용성
+이 있는데, 1은 잘지켜진것같은데 2번 부분에서 아쉬워요
+
+Victory 함수명보다는
+ShowGameResult 이런 함수명이 더좋지 않을까 싶습니다!
+
+기본적으로 깔끔하고 잘짜셨어요*/
