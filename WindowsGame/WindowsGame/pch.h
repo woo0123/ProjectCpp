@@ -9,16 +9,21 @@
 #include <sdkddkver.h>
 #define WIN32_LEAN_AND_MEAN
 
+
 #include <Windows.h>
 #include <stdlib.h>
 #include <malloc.h>
 #include <memory.h>
 #include <tchar.h>
 #include <windowsx.h>
+#include <wingdi.h>
 
 #include <iostream>
 #include <format>
+#include <string>
 #pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+#pragma comment(lib, "Msimg32.lib")
+
 
 //==========================================
 //	## C++ 관련 헤더 ##
@@ -42,14 +47,16 @@ using namespace std;
 //	## Define 설정 ##
 //==========================================
 #include "Defines.h"
+#include "Enums.h"
 
 
 //==========================================
 //	## Types 관련 헤더 ##
 //==========================================
+#include "Types.h"
 #include "Vector2.h"
+#include "Vector2Int.h"
 #include "CenterRect.h"
-
 
 
 //==========================================
@@ -62,4 +69,17 @@ using namespace std;
 //==========================================
 //	## 매니저 헤더 ##
 //=========================================
+#include "RandomManager.h"
 #include "InputManager.h"
+#include "TimeManager.h"
+#include "SceneManager.h"
+#include "ResourceManager.h"
+#include "CollisionManager.h"
+
+
+
+
+
+//extern 키워드는 다른 파일에서도 쓸수있는 전역변수 선언
+extern HINSTANCE	_hInstance;
+extern HWND			_hWnd;

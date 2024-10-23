@@ -43,6 +43,8 @@ enum
 
 class InputManager
 {
+DECLARE_SINGLE(InputManager);
+
 public:
 	void Init(HWND hwnd);
 	void Update();
@@ -64,3 +66,4 @@ private:
 	vector<KeyState> _states;
 };
 
+#define Input GET_SINGLE(InputManager)
