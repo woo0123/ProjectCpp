@@ -41,6 +41,9 @@
     <Filter Include="05.Components">
       <UniqueIdentifier>{91ffdbf1-fbd4-46bb-94cf-5203d9f204fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Objects\Day21">
+      <UniqueIdentifier>{b5b7210f-4b5a-4300-9fb0-2d316b62f108}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -124,6 +127,45 @@
     <ClCompile Include="Day21Scene.cpp">
       <Filter>03.Scenes\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Day21Paddle.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Ball.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Brick.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Flipbook.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipbookRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -169,6 +211,15 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment15.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment16.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment17.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment18.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -258,6 +309,45 @@
       <Filter>05.Components</Filter>
     </ClInclude>
     <ClInclude Include="Day21Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Paddle.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Ball.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Brick.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Flipbook.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FlipbookRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Scene.h">
       <Filter>03.Scenes\Game</Filter>
     </ClInclude>
   </ItemGroup>

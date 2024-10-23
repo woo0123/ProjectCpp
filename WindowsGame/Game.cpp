@@ -39,13 +39,14 @@ void Game::Init(HWND hWnd)
 	Input->Init(_hwnd);
 	Time->Init();
 	Resource->Init();
-
+	GET_SINGLE(CollisionManager)->Init();
 	GET_SINGLE(SceneManager)->Init();
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Day20Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Day24Scene);
 }
 
 void Game::Update()
 {
+	GET_SINGLE(CollisionManager)->Update();
 	Input->Update();
 	Time->Update(); 
 	GET_SINGLE(SceneManager)->Update();

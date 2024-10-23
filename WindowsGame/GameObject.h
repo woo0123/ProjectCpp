@@ -15,7 +15,7 @@ public:
 	inline string GetName() { return _name; }
 	inline void SetName(string name) { _name = name; }
 
-	inline Vector2 GetPos() { _body.pos; }
+	inline Vector2 GetPos() { return _body.pos; }
 	inline void SetPos(Vector2 pos) { _body.pos = pos; }
 
 	inline void SetWidth(float width) { _body.width = width; }
@@ -29,7 +29,11 @@ public:
 	virtual void Render(HDC hdc);
 	virtual void Update();
 	virtual void Release();
+	virtual string ToString() { return ""; }
 
+public:
+	virtual void OnTriggerEnter(Collider* collider, Collider* other);
+	virtual void OnTriggerExit(Collider* collider, Collider* other);
 public:
 	void AddComponent(Component* component);
 	void RemoveComponent(Component* component);

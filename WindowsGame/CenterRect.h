@@ -14,7 +14,7 @@ struct CenterRect
 	Vector2 pos = {0, 0};	//중심좌표
 	float width = 0, height = 0;
 
-	void Draw(HDC hdc, CenterRectDrawType drawType = DRAWTYPE_RECT);
+	void Draw(HDC hdc, CenterRectDrawType drawType = DRAWTYPE_RECT, int brush = NULL_BRUSH);
 
 	CenterRect(float x, float y, float width, float height);
 	CenterRect(float x, float y);

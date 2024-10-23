@@ -41,7 +41,7 @@ public:										\
 
 
 #define DECLARE_CHILD(ClassName, ParentName)	\
-using Super = ParentName;						\
+	using Super = ParentName;					\
 public:											\
 	ClassName() {}								\
 	virtual ~ClassName() {}

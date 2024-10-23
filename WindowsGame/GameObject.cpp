@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "GameObject.h"
 #include "Component.h"
+#include "Collider.h"
 void GameObject::Init()
 {
 }
@@ -41,6 +42,7 @@ void GameObject::AddComponent(Component* component)
 	component->Init();
 	_components.push_back(component);
 }
+
 void GameObject::RemoveComponent(Component* component)
 {
 	if (component == nullptr) return;
@@ -54,4 +56,13 @@ void GameObject::RemoveComponent(Component* component)
 		SAFE_DELETE(deleteComponent);
 		_components.erase(findIt);
 	}
+}
+
+void GameObject::OnTriggerEnter(Collider* collider, Collider* other)
+{
+	cout << "충돌 시작 : " << collider->GetOwner()->GetName().c_str() << " -> " << other->GetOwner()->GetName().c_str() << endl;
+}
+void GameObject::OnTriggerExit(Collider* collider, Collider* other)
+{
+	cout << "충돌 끝 : " << collider->GetOwner()->GetName().c_str() << " -> " << other->GetOwner()->GetName().c_str() << endl;
 }

@@ -1,12 +1,15 @@
 ﻿#include "pch.h"
 #include "CenterRect.h"
 
-void CenterRect::Draw(HDC hdc, CenterRectDrawType drawType)
+void CenterRect::Draw(HDC hdc, CenterRectDrawType drawType, int brush)
 {
 	int x = static_cast<int>(this->pos.x);
 	int y = static_cast<int>(this->pos.y);
 	int width = static_cast<int>(this->width);
 	int height = static_cast<int>(this->height);
+
+	HBRUSH brushObj = GetStockBrush(brush);
+	HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brushObj);
 
 	if (drawType == DRAWTYPE_RECT)
 	{
@@ -16,6 +19,8 @@ void CenterRect::Draw(HDC hdc, CenterRectDrawType drawType)
 	{
 		Draw::Ellipse(hdc, x, y, width, height);
 	}
+	HBRUSH oldBrush2 = (HBRUSH)SelectObject(hdc, oldBrush);
+	DeleteObject(oldBrush2);
 }
 
 CenterRect::CenterRect(float x, float y, float width, float height)
